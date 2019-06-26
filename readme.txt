@@ -1,3 +1,1 @@
-love you everyday
-happy birthday to you
-Still Alone, Look for Love but fail
+今天华为工作还挺开心，饭堂好吃
