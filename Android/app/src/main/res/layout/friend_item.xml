@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+            <ImageView
+                android:id="@+id/user_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/img1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/user_head"
+                >
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="蔡徐坤"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/user_name"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/user_icon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/img3"
+                        />
+                    <TextView
+                        android:id="@+id/user_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:gravity="center"
+                        android:text="Lv7"
+                        android:textColor="@color/white"
+                        android:background="@color/mc_red_33"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="9sp"
+                        android:padding="2dp"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_head"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/content_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/black"
+                    />
+                <ImageView
+                    android:id="@+id/content_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/content"
+                    />
+
+                <GridView
+                    android:id="@+id/content_gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:columnWidth="70dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="2.5dp"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="2.5dp"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
