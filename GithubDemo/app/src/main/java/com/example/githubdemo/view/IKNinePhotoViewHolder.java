@@ -10,7 +10,10 @@ import android.view.View;
  */
 
 public abstract class IKNinePhotoViewHolder {
-    private boolean flag = false;
+    /**
+     * 标记此viewHolder是否被使用
+     */
+    private boolean used = false;
     private View itemView;
 
     public IKNinePhotoViewHolder(View itemView) {
@@ -20,12 +23,12 @@ public abstract class IKNinePhotoViewHolder {
         this.itemView = itemView;
     }
 
-    public boolean getFlag() {
-        return flag;
+    public boolean isUsed() {
+        return used;
     }
 
-    public void setFlag(boolean flag) {
-        this.flag = flag;
+    public void setUsed(boolean used) {
+        this.used = used;
     }
 
     public View getItemView() {

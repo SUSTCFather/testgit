@@ -30,15 +30,16 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.RVHolder> {
     @Override
     public RVHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv,parent,false);
+
+
         RVHolder rvHolder = new RVHolder(view);
         return rvHolder;
     }
 
     @Override
     public void onBindViewHolder(RVHolder holder, int position) {
-        MyAdapter adapter = new MyAdapter(context);
-        holder.mNinePhoto.setAdapter(adapter);
-
+        //DemoAdapter adapter = new DemoAdapter(context);
+        //holder.mNinePhoto.setAdapter(adapter);
     }
 
     @Override

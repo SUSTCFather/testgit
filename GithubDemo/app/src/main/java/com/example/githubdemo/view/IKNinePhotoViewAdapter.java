@@ -2,6 +2,8 @@ package com.example.githubdemo.view;
 
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+
 import java.util.Observable;
 
 /**
@@ -11,22 +13,28 @@ import java.util.Observable;
  * des : 九宫格Adapter
  */
 
+//变化的通知者
 public abstract class IKNinePhotoViewAdapter<T extends IKNinePhotoViewHolder> extends Observable {
+
 
     public IKNinePhotoViewAdapter() {
         super();
     }
 
+    /**
+     * 获取view的总数
+     * @return
+     */
     public int getItemCount(){
         return 0;
     }
 
-    public abstract T createView(ViewGroup parent);
+    public abstract T onCreateViewHolder(ViewGroup parent);
 
-    public abstract void displayView(T holder, int position);
+    public abstract void onBindViewHolder(T holder, int position,int maxWidth,boolean isSingle);
 
 
-    public void notifyChanged(){
+    public void notifyDataSetChanged(){
         setChanged();
         notifyObservers();
     }
